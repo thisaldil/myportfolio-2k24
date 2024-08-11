@@ -204,7 +204,7 @@ section {
 
 .section_pic-container1::before {
   content: "";
-  background: url("./assets/my2m.png") no-repeat center center;
+  background: url("./assets/THISAL-modified.png") no-repeat center center;
   background-size: cover; /* Ensures the image covers the container */
   position: absolute;
   top: 0;
