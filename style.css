@@ -6,32 +6,32 @@
 /* ── Design Tokens ─────────────────────────── */
 :root {
   /* LinkedIn-extracted palette */
-  --li-bg:           #F3F2EE;
-  --li-surface:      #FFFFFF;
-  --li-border:       #E0DFDC;
-  --li-border-soft:  #F0EFEC;
-  --li-text-primary: #1D2226;
+  --li-bg:             #F3F2EE;
+  --li-surface:        #FFFFFF;
+  --li-border:         #E0DFDC;
+  --li-border-soft:    #F0EFEC;
+  --li-text-primary:   #1D2226;
   --li-text-secondary: #5E6B75;
-  --li-text-muted:   #9AA2A9;
-  --li-blue:         #0A66C2;
-  --li-blue-hover:   #004182;
-  --li-blue-tint:    #EBF3FB;
-  --li-green:        #057642;
-  --li-green-tint:   #E7F3EC;
+  --li-text-muted:     #9AA2A9;
+  --li-blue:           #0A66C2;
+  --li-blue-hover:     #004182;
+  --li-blue-tint:      #EBF3FB;
+  --li-green:          #057642;
+  --li-green-tint:     #E7F3EC;
 
   /* Typography */
-  --font-display:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-body:       'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
   /* Radii */
-  --radius-card:     8px;
-  --radius-pill:     24px;
-  --radius-circle:   50%;
+  --radius-card:   8px;
+  --radius-pill:   24px;
+  --radius-circle: 50%;
 
   /* Shadows */
-  --shadow-card:     0 0 0 1px rgba(0,0,0,.08), 0 2px 6px rgba(0,0,0,.06);
+  --shadow-card:       0 0 0 1px rgba(0,0,0,.08), 0 2px 6px rgba(0,0,0,.06);
   --shadow-card-hover: 0 0 0 1px rgba(0,0,0,.12), 0 4px 16px rgba(0,0,0,.10);
-  --shadow-btn:      0 0 0 2px var(--li-blue);
+  --shadow-btn:        0 0 0 2px var(--li-blue);
 
   /* Spacing scale */
   --sp-xs:  4px;
@@ -63,7 +63,10 @@ a:hover { text-decoration: underline; color: var(--li-blue-hover); }
 ul { list-style: none; }
 button { font-family: inherit; cursor: pointer; }
 
-/* ── Navbar ─────────────────────────────────── */
+
+/* ══════════════════════════════════════════════
+   NAVBAR
+══════════════════════════════════════════════ */
 #desktop-nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -102,10 +105,7 @@ button { font-family: inherit; cursor: pointer; }
   width: 220px;
 }
 
-.nav-links {
-  display: flex;
-  gap: 0;
-}
+.nav-links { display: flex; gap: 0; }
 
 .nav-links li a {
   display: flex;
@@ -122,9 +122,7 @@ button { font-family: inherit; cursor: pointer; }
   white-space: nowrap;
 }
 
-.nav-links li a i {
-  font-size: 1.1rem;
-}
+.nav-links li a i { font-size: 1.1rem; }
 
 .nav-links li a:hover,
 .nav-links li a.active {
@@ -136,7 +134,7 @@ button { font-family: inherit; cursor: pointer; }
 .nav-right { display: flex; align-items: center; gap: var(--sp-sm); }
 
 .btn-nav-primary {
-  padding: var(--sp-sm) var(--sp-lg);
+  padding: calc(var(--sp-sm) - 1px) var(--sp-lg);
   border-radius: var(--radius-pill);
   border: 1.5px solid var(--li-blue);
   background: transparent;
@@ -145,11 +143,12 @@ button { font-family: inherit; cursor: pointer; }
   font-weight: 600;
   transition: background 0.15s, color 0.15s;
 }
-.btn-nav-primary:hover {
-  background: var(--li-blue-tint);
-}
+.btn-nav-primary:hover { background: var(--li-blue-tint); }
 
-/* ── Hamburger Nav ──────────────────────────── */
+
+/* ══════════════════════════════════════════════
+   HAMBURGER NAV
+══════════════════════════════════════════════ */
 #hamburger-nav {
   display: none;
   position: fixed;
@@ -195,7 +194,10 @@ button { font-family: inherit; cursor: pointer; }
   border-bottom: 1px solid var(--li-border-soft);
 }
 
-/* ── Page Layout ────────────────────────────── */
+
+/* ══════════════════════════════════════════════
+   PAGE LAYOUT
+══════════════════════════════════════════════ */
 .page-body {
   margin-top: var(--nav-height);
   padding: var(--sp-xl) var(--sp-lg);
@@ -209,7 +211,10 @@ button { font-family: inherit; cursor: pointer; }
   gap: var(--sp-md);
 }
 
-/* ── Card Base ──────────────────────────────── */
+
+/* ══════════════════════════════════════════════
+   CARD BASE
+══════════════════════════════════════════════ */
 .card {
   background: var(--li-surface);
   border-radius: var(--radius-card);
@@ -222,7 +227,10 @@ button { font-family: inherit; cursor: pointer; }
 .card-body { padding: var(--sp-xl); }
 .card-body + .card-body { border-top: 1px solid var(--li-border-soft); }
 
-/* ── Section labels ─────────────────────────── */
+
+/* ══════════════════════════════════════════════
+   SECTION LABELS
+══════════════════════════════════════════════ */
 .section-eyebrow {
   font-size: 0.79rem;
   font-weight: 600;
@@ -239,77 +247,66 @@ button { font-family: inherit; cursor: pointer; }
   margin-bottom: var(--sp-lg);
 }
 
-/* ── Profile Hero Card ──────────────────────── */
+
+/* ══════════════════════════════════════════════
+   PROFILE HERO CARD
+   FIX: Removed duplicate .profile-banner-gradient,
+        .profile-avatar, .profile-avatar-ring,
+        and .profile-info-row rules. Single
+        canonical definition for each.
+══════════════════════════════════════════════ */
 #profile { position: relative; }
 
-.profile-banner {
+/* Banner — single height: 250px */
+.profile-banner-gradient {
   width: 100%;
-  height: 160px;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0A66C2 0%, #004182 50%, #1D2226 100%);
+}
+.profile-banner-gradient img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  background: linear-gradient(135deg, #0A66C2 0%, #004182 60%, #1D2226 100%);
   display: block;
 }
 
-/* Fallback gradient banner */
-.profile-banner-gradient {
-  width: 100%;
-  height: 160px;
-  background: linear-gradient(135deg, #0A66C2 0%, #004182 50%, #1D2226 100%);
-}
-
+/* Info row */
 .profile-info-row {
-    position: relative;
-
-    padding-top: 100px;
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-bottom: 24px;
+  position: relative;
+  padding: 100px var(--sp-xl) var(--sp-xl);
 }
+
+/* Avatar wrap — anchored to top of info row */
 .profile-avatar-wrap {
-    position: absolute;
-
-    left: 24px;
-    top: -70px;
-
-    z-index: 100;
+  position: absolute;
+  left: var(--sp-xl);
+  top: -70px;
+  z-index: 100;
 }
 
+/* Avatar ring — single size: 140px */
 .profile-avatar-ring {
-    width: 160px;
-    height: 160px;
-
-    border-radius: 50%;
-    overflow: hidden;
-
-    border: 5px solid white;
-    background: white;
-
-    box-shadow: 0 4px 12px rgba(0,0,0,.15);
+  width: 140px;
+  height: 140px;
+  border-radius: var(--radius-circle);
+  overflow: hidden;
+  border: 4px solid white;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,.15);
 }
 
+/* Avatar image */
 .profile-avatar {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-    object-position: center;
-
-    display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--radius-circle);
+  display: block;
 }
 
-.profile-banner-gradient {
-    width: 100%;
-    height: 250px;
-    position: relative;
-    overflow: hidden;
-}
-
-.profile-banner-gradient img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
 .profile-name {
   font-size: 1.57rem;
   font-weight: 700;
@@ -362,11 +359,26 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 .company-logo {
-  width: 20px; height: 20px;
-  border-radius: 3px;
-  background: var(--li-blue);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 0.65rem; font-weight: 900; color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  background: var(--li-blue);           /* fallback if image fails */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* FIX: White background so transparent logos look clean */
+.company-logo--white {
+  background: #ffffff;
+  border: 1px solid var(--li-border);
+}
+
+.company-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .profile-actions {
@@ -376,7 +388,25 @@ button { font-family: inherit; cursor: pointer; }
   margin-top: var(--sp-md);
 }
 
-/* ── Buttons ────────────────────────────────── */
+/* Side decorative video — absolute within .profile-info-row */
+.profile-side-video {
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+  width: 140px;
+  height: 140px;
+  pointer-events: none;
+}
+.profile-side-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+/* ══════════════════════════════════════════════
+   BUTTONS
+══════════════════════════════════════════════ */
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -425,13 +455,15 @@ button { font-family: inherit; cursor: pointer; }
 }
 .btn-ghost:hover { background: rgba(0,0,0,0.04); }
 
-/* ── About Card ─────────────────────────────── */
+
+/* ══════════════════════════════════════════════
+   ABOUT CARD
+══════════════════════════════════════════════ */
 .about-text {
   font-size: 0.93rem;
   color: var(--li-text-secondary);
   line-height: 1.7;
 }
-
 .about-text strong { color: var(--li-text-primary); }
 
 .show-more-btn {
@@ -448,7 +480,10 @@ button { font-family: inherit; cursor: pointer; }
 }
 .show-more-btn:hover { color: var(--li-text-primary); }
 
-/* ── Activity / Featured Card ───────────────── */
+
+/* ══════════════════════════════════════════════
+   FEATURED PROJECTS
+══════════════════════════════════════════════ */
 .featured-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -464,19 +499,14 @@ button { font-family: inherit; cursor: pointer; }
 }
 .featured-item:hover { box-shadow: var(--shadow-card-hover); }
 
-.featured-img {
+.featured-img-placeholder {
   width: 100%;
   height: 120px;
-  object-fit: cover;
-  background: linear-gradient(135deg, var(--li-blue-tint), var(--li-border));
-}
-
-.featured-img-placeholder {
-  width: 100%; height: 120px;
   background: linear-gradient(135deg, #EBF3FB 0%, #C8E1F5 100%);
-  display: flex; align-items: center; justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 2rem;
-  color: var(--li-blue);
 }
 
 .featured-item-body { padding: var(--sp-md); }
@@ -496,13 +526,15 @@ button { font-family: inherit; cursor: pointer; }
   color: var(--li-text-muted);
 }
 
-/* ── Experience / Skills Timeline ───────────── */
+
+/* ══════════════════════════════════════════════
+   TIMELINE (EXPERIENCE / EDUCATION)
+══════════════════════════════════════════════ */
 .timeline-item {
   display: flex;
   gap: var(--sp-lg);
   padding: var(--sp-lg) 0;
   border-bottom: 1px solid var(--li-border-soft);
-  position: relative;
 }
 .timeline-item:last-child { border-bottom: none; }
 
@@ -544,7 +576,10 @@ button { font-family: inherit; cursor: pointer; }
   line-height: 1.6;
 }
 
-/* ── Skills Section ─────────────────────────── */
+
+/* ══════════════════════════════════════════════
+   SKILLS
+══════════════════════════════════════════════ */
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
@@ -570,7 +605,6 @@ button { font-family: inherit; cursor: pointer; }
   border-color: var(--li-blue);
   color: var(--li-blue);
 }
-
 .skill-pill i { font-size: 0.93rem; color: var(--li-blue); }
 
 .skill-endorsement {
@@ -579,7 +613,10 @@ button { font-family: inherit; cursor: pointer; }
   margin-left: var(--sp-xs);
 }
 
-/* ── Projects (Portfolio) ───────────────────── */
+
+/* ══════════════════════════════════════════════
+   PROJECTS
+══════════════════════════════════════════════ */
 .project-card {
   display: flex;
   gap: var(--sp-lg);
@@ -600,8 +637,6 @@ button { font-family: inherit; cursor: pointer; }
   border: 1px solid var(--li-border);
   display: flex; align-items: center; justify-content: center;
 }
-
-.project-thumb img { width: 100%; height: 100%; object-fit: cover; }
 
 .project-thumb-placeholder {
   width: 100%; height: 100%;
@@ -661,7 +696,10 @@ button { font-family: inherit; cursor: pointer; }
   text-decoration: none;
 }
 
-/* ── Contact Section ────────────────────────── */
+
+/* ══════════════════════════════════════════════
+   CONTACT
+══════════════════════════════════════════════ */
 #contact .card-body {
   display: flex;
   flex-direction: column;
@@ -702,7 +740,10 @@ button { font-family: inherit; cursor: pointer; }
 .contact-value a { color: var(--li-blue); }
 .contact-value a:hover { color: var(--li-blue-hover); }
 
-/* ── Education Card ─────────────────────────── */
+
+/* ══════════════════════════════════════════════
+   EDUCATION
+══════════════════════════════════════════════ */
 .edu-item {
   display: flex;
   gap: var(--sp-lg);
@@ -718,12 +759,18 @@ button { font-family: inherit; cursor: pointer; }
   background: var(--li-blue-tint);
   border: 1px solid var(--li-border);
   display: flex; align-items: center; justify-content: center;
-  font-size: 0.65rem; font-weight: 900; color: var(--li-blue);
-  text-align: center; line-height: 1.2;
+  font-size: 0.65rem;
+  font-weight: 900;
+  color: var(--li-blue);
+  text-align: center;
+  line-height: 1.2;
   padding: var(--sp-xs);
 }
 
-/* ── Open to Work Banner ────────────────────── */
+
+/* ══════════════════════════════════════════════
+   OPEN TO WORK BANNER
+══════════════════════════════════════════════ */
 .open-to-work-banner {
   background: var(--li-green-tint);
   border: 1px solid #B2DFC5;
@@ -749,7 +796,10 @@ button { font-family: inherit; cursor: pointer; }
 .open-text { flex: 1; color: var(--li-text-secondary); }
 .open-text strong { color: var(--li-text-primary); }
 
-/* ── Footer ─────────────────────────────────── */
+
+/* ══════════════════════════════════════════════
+   FOOTER
+══════════════════════════════════════════════ */
 footer {
   background: var(--li-surface);
   border-top: 1px solid var(--li-border);
@@ -780,25 +830,21 @@ footer {
   gap: var(--sp-lg);
 }
 
-.footer-links a {
-  font-size: 0.79rem;
-  color: var(--li-text-muted);
-}
+.footer-links a { font-size: 0.79rem; color: var(--li-text-muted); }
 .footer-links a:hover { color: var(--li-text-secondary); }
 
-.footer-copy {
-  font-size: 0.79rem;
-  color: var(--li-text-muted);
-}
+.footer-copy { font-size: 0.79rem; color: var(--li-text-muted); }
 
-/* ── Divider ────────────────────────────────── */
+
+/* ══════════════════════════════════════════════
+   UTILITIES
+══════════════════════════════════════════════ */
 .divider {
   height: 1px;
   background: var(--li-border-soft);
   margin: var(--sp-md) 0;
 }
 
-/* ── Show More Row ──────────────────────────── */
 .show-more-row {
   text-align: center;
   padding-top: var(--sp-md);
@@ -815,133 +861,140 @@ footer {
 }
 .show-more-row a:hover { color: var(--li-text-primary); text-decoration: none; }
 
-/* ── Responsive ─────────────────────────────── */
-@media (max-width: 768px) {
-  #desktop-nav { display: none; }
-  #hamburger-nav { display: flex; }
 
-  .page-body { padding: var(--sp-md) var(--sp-sm); }
+/* ══════════════════════════════════════════════
+   BANNER LOTTIE (inside banner)
+══════════════════════════════════════════════ */
+.profile-banner-gradient { position: relative; overflow: hidden; }
 
-  .profile-avatar-wrap { margin-top: -48px; }
-  .profile-avatar, .profile-avatar-ring { width: 88px; height: 88px; }
-
-  .profile-banner-gradient { height: 120px; }
-
-  .profile-name { font-size: 1.29rem; }
-
-  .featured-grid { grid-template-columns: 1fr; }
-
-  .profile-actions {
-    flex-direction: column;
-  }
-  .profile-actions button,
-  .profile-actions a { width: 100%; justify-content: center; }
-
-  .project-card { flex-direction: column; }
-  .project-thumb { width: 100%; height: 160px; }
+.banner-lottie {
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+  width: 220px;
+  height: 220px;
 }
 
-@media (max-width: 480px) {
-  .profile-info-row { padding: 0 var(--sp-md) var(--sp-lg); }
-  .card-body { padding: var(--sp-lg); }
-}
-.profile-banner-gradient{
-    position:relative;
-    overflow:hidden;
-}
 
-.banner-lottie{
-    position:absolute;
-    right:20px;
-    bottom:0;
-
-    width:220px;
-    height:220px;
-}
-
-.floating-assistant{
-    position: fixed;
-
-    right: 20px;
-    bottom: 20px;
-
-    width: 140px;
-    height: 140px;
-
-    z-index: 9999;
-
-    pointer-events: none;
-}
-
-.floating-assistant video{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.profile-avatar {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-}
-.profile-avatar-ring {
-    width: 108px;
-    height: 108px;
-    border-radius: 50%;
-    border: 3px solid white;
-    overflow: hidden;
-    background: white;
-}
-
-.profile-info-row{
-    position: relative;
-}
-
-.profile-side-video{
-    position: absolute;
-    right: 30px;
-    bottom: 20px;
-
-    width: 140px;
-    height: 140px;
-}
-
-.profile-side-video video{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-/* Fixed container for the corner Lottie widget */
+/* ══════════════════════════════════════════════
+   SCROLL LOTTIE WIDGET
+   FIX: Single clean definition — no duplicates
+══════════════════════════════════════════════ */
 #scroll-lottie-container {
   position: fixed;
   bottom: 20px;
   right: 20px;
   z-index: 9999;
-  pointer-events: none; /* Allows clicks to pass through if necessary */
+  pointer-events: none;
   transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.4s ease;
 }
 
-/* Hidden state: Pushed completely off-screen downwards */
+/* Hidden: slides down off-screen */
 .lottie-hidden {
   transform: translateY(120%);
   opacity: 0;
 }
 
-/* Visible state: Slipped into its natural position */
+/* Visible: snaps back into position */
 .lottie-visible {
   transform: translateY(0);
   opacity: 1;
 }
 
-/* Responsive adjustment for small mobile viewports */
+
+/* ══════════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════════ */
 @media (max-width: 768px) {
-  #scroll-lottie-container dotlottie-wc {
-    width: 150px !important;
-    height: 150px !important;
-  }
+  #desktop-nav  { display: none; }
+  #hamburger-nav { display: flex; }
+
+  .page-body { padding: var(--sp-md) var(--sp-sm); }
+
+  /* Smaller banner on mobile */
+  .profile-banner-gradient { height: 140px; }
+
+  /* Smaller avatar on mobile */
+  .profile-avatar-wrap { top: -50px; }
+  .profile-avatar-ring { width: 96px; height: 96px; border-width: 3px; }
+
+  /* Extra top padding to clear avatar */
+  .profile-info-row { padding-top: 60px; }
+
+  .profile-name { font-size: 1.29rem; }
+
+  .featured-grid { grid-template-columns: 1fr; }
+
+  .profile-actions { flex-direction: column; }
+  .profile-actions button,
+  .profile-actions a { width: 100%; justify-content: center; }
+
+  .project-card  { flex-direction: column; }
+  .project-thumb { width: 100%; height: 160px; }
+
+  /* Hide side video on mobile — too cramped */
+  .profile-side-video { display: none; }
+
+  /* Smaller Lottie widget on mobile */
   #scroll-lottie-container {
     bottom: 10px;
     right: 10px;
   }
+  #scroll-lottie-container dotlottie-wc {
+    width: 150px !important;
+    height: 150px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-info-row { padding: 60px var(--sp-md) var(--sp-lg); }
+  .card-body { padding: var(--sp-lg); }
+}
+
+/* ── Music Player ───────────────────────── */
+#music-player {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-sm);
+}
+
+#music-toggle {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-circle);
+  border: 1.5px solid var(--li-border);
+  background: var(--li-surface);
+  color: var(--li-blue);
+  font-size: 1rem;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.2s;
+  cursor: pointer;
+}
+#music-toggle:hover {
+  background: var(--li-blue-tint);
+  transform: scale(1.08);
+}
+
+#music-label {
+  font-size: 0.75rem;
+  color: var(--li-text-muted);
+  font-weight: 500;
+  background: var(--li-surface);
+  padding: 3px var(--sp-sm);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--li-border);
+  box-shadow: var(--shadow-card);
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  #music-label { display: none; }
+  #music-player { bottom: 10px; left: 10px; }
 }

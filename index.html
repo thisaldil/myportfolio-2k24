@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-<script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.9.14/dist/dotlottie-wc.js" type="module"></script>
+  <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.9.14/dist/dotlottie-wc.js" type="module"></script>
 </head>
 <body>
 
@@ -17,10 +17,8 @@
   ══════════════════════════════════════════ -->
   <nav id="desktop-nav">
     <div class="nav-left">
-      <div class="logo">in</div>
-      <div class="nav-search">
-        <i class="fas fa-search" style="font-size:0.86rem;"></i>
-        <span>Search</span>
+      <div class="logo">TD</div>
+     
       </div>
     </div>
 
@@ -49,41 +47,40 @@
         <span></span><span></span><span></span>
       </div>
       <ul class="menu-links">
-        <li><a href="#profile"   onclick="toggleMenu()">Profile</a></li>
-        <li><a href="#about"     onclick="toggleMenu()">About</a></li>
+        <li><a href="#profile"    onclick="toggleMenu()">Profile</a></li>
+        <li><a href="#about"      onclick="toggleMenu()">About</a></li>
         <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-        <li><a href="#projects"  onclick="toggleMenu()">Projects</a></li>
-        <li><a href="#contact"   onclick="toggleMenu()">Contact</a></li>
+        <li><a href="#projects"   onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact"    onclick="toggleMenu()">Contact</a></li>
       </ul>
     </div>
   </nav>
-<!-- ══════════════════════════════════════════
-     PAGE BODY
-══════════════════════════════════════════ -->
-<div class="page-body">
-  <div class="content-grid">
 
-    <!-- ── 1. PROFILE HERO CARD ────────────── -->
-    <div class="card" id="profile">
+  <!-- ══════════════════════════════════════════
+       PAGE BODY
+  ══════════════════════════════════════════ -->
+  <div class="page-body">
+    <div class="content-grid">
 
-      <div class="profile-banner-gradient">
-        <img
-          src="./assets/banner (2).png"
-          alt="Banner"
-        />
-      </div>
+      <!-- ── 1. PROFILE HERO CARD ────────────── -->
+      <!-- FIX: Card is now properly self-contained and closed at the end of this section -->
+      <div class="card" id="profile">
 
-      <div class="profile-info-row">
-
-        <div class="profile-avatar-wrap">
-          <div class="profile-avatar-ring">
-            <img
-              src="./assets/linkdin.jpeg"
-              alt="Thisal"
-              class="profile-avatar"
-            />
-          </div>
+        <div class="profile-banner-gradient">
+          <img src="./assets/banner (2).png" alt="Banner" />
         </div>
+
+        <div class="profile-info-row">
+
+          <div class="profile-avatar-wrap">
+            <div class="profile-avatar-ring">
+              <img
+                src="./assets/linkdin.jpeg"
+                alt="Thisal"
+                class="profile-avatar"
+              />
+            </div>
+          </div>
 
           <div style="display:flex; justify-content:flex-end; margin-top:-2rem; margin-bottom:0.5rem; gap:8px;">
             <a href="https://www.linkedin.com/in/thisal-gonsalkorala/" target="_blank" class="btn-ghost" style="font-size:0.79rem;">
@@ -103,47 +100,45 @@
             <a href="#contact" class="profile-connections">Contact info</a>
           </div>
 
-         <div class="profile-companies">
-  <div class="company-badge">
-    <div class="company-logo">
-      <img src="assets/abmsz.png" alt="ABMSZ Logo">
-    </div>
-    <span>ABMSZ</span>
-  </div>
-  
-  <div class="company-badge">
-    <!-- Removed inline background color since the image will cover it -->
-    <div class="company-logo">
-      <img src="assets/sliit.png" alt="SLIIT Logo">
-    </div>
-    <span>SLIIT</span>
-  </div>
-</div>
+          <div class="profile-companies">
+            <div class="company-badge">
+              <!-- FIX: background set to white/transparent so image shows cleanly -->
+              <div class="company-logo company-logo--white">
+                <img src="assets/abmsz.png" alt="ABMSZ Logo">
+              </div>
+              <span>ABMSZ</span>
+            </div>
+            <div class="company-badge">
+              <div class="company-logo company-logo--white">
+                <img src="assets/sliit.png" alt="SLIIT Logo">
+              </div>
+              <span>SLIIT</span>
+            </div>
+          </div>
 
           <div class="profile-actions">
-  <button class="btn-primary" onclick="location.href='#contact'">
-    <i class="fas fa-paper-plane"></i> Message
-  </button>
+            <button class="btn-primary" onclick="location.href='#contact'">
+              <i class="fas fa-paper-plane"></i> Message
+            </button>
+            <button class="btn-secondary" onclick="window.open('./assets/TDG_Resume.pdf')">
+              <i class="fas fa-download"></i> Download CV
+            </button>
+            <button class="btn-ghost">
+              <i class="fas fa-user-plus"></i> Connect
+            </button>
+            <button class="btn-ghost">
+              <i class="fas fa-ellipsis-h"></i> More
+            </button>
+          </div>
 
-  <button class="btn-secondary" onclick="window.open('./assets/TDG_Resume.pdf')">
-    <i class="fas fa-download"></i> Download CV
-  </button>
+          <!-- Side video stays inside profile-info-row so its absolute position works -->
+          <div class="profile-side-video">
+            <video autoplay muted loop playsinline>
+              <source src="./assets/flat.mp4" type="video/mp4">
+            </video>
+          </div>
 
-  <button class="btn-ghost">
-    <i class="fas fa-user-plus"></i> Connect
-  </button>
-
-  <button class="btn-ghost">
-    <i class="fas fa-ellipsis-h"></i> More
-  </button>
-</div>
-
-<div class="profile-side-video">
-  <video autoplay muted loop playsinline>
-    <source src="./assets/flat.mp4" type="video/mp4">
-  </video>
-</div>
-        </div>
+        </div><!-- /profile-info-row -->
 
         <!-- Open to Work Banner -->
         <div style="padding: 0 var(--sp-xl) var(--sp-xl);">
@@ -155,7 +150,9 @@
             </p>
           </div>
         </div>
-      </div>
+
+      </div><!-- /card#profile  ← FIX: properly closed here -->
+
 
       <!-- ── 2. ABOUT CARD ───────────────────── -->
       <div class="card" id="about">
@@ -185,7 +182,8 @@
         </div>
       </div>
 
-      <!-- ── 3. FEATURED PROJECTS (ACTIVITY) ── -->
+
+      <!-- ── 3. FEATURED PROJECTS ──────────────── -->
       <div class="card" id="projects">
         <div class="card-body">
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:var(--sp-lg);">
@@ -212,7 +210,6 @@
             </div>
           </div>
 
-          <!-- Project List -->
           <div class="divider"></div>
 
           <div class="project-card" onclick="window.open('https://github.com/eranmadhuka/PrintingPressManagement')">
@@ -299,6 +296,7 @@
         </div>
       </div>
 
+
       <!-- ── 4. EXPERIENCE ──────────────────── -->
       <div class="card" id="experience">
         <div class="card-body">
@@ -345,8 +343,10 @@
               </div>
             </div>
           </div>
+
         </div>
       </div>
+
 
       <!-- ── 5. SKILLS ──────────────────────── -->
       <div class="card">
@@ -398,6 +398,7 @@
         </div>
       </div>
 
+
       <!-- ── 6. EDUCATION ───────────────────── -->
       <div class="card">
         <div class="card-body">
@@ -417,6 +418,7 @@
           </div>
         </div>
       </div>
+
 
       <!-- ── 7. CONTACT ─────────────────────── -->
       <div class="card" id="contact">
@@ -467,6 +469,7 @@
     </div><!-- /content-grid -->
   </div><!-- /page-body -->
 
+
   <!-- ══════════════════════════════════════════
        FOOTER
   ══════════════════════════════════════════ -->
@@ -481,21 +484,36 @@
         <a href="https://github.com/thisaldil" target="_blank">GitHub</a>
         <a href="https://www.linkedin.com/in/thisal-gonsalkorala/" target="_blank">LinkedIn</a>
       </nav>
-      <p class="footer-copy">© 2024 Thisal Dilmith Gonsalkorala · Elite Software Engineering Portfolio</p>
+      <!-- FIX: Updated copyright year -->
+      <p class="footer-copy">© 2026 Thisal Dilmith Gonsalkorala · Elite Software Engineering Portfolio</p>
     </div>
   </footer>
+
+
+  <!-- ══════════════════════════════════════════
+       LOTTIE SCROLL WIDGET
+       FIX: Moved inside <body> so JS can find it
+  ══════════════════════════════════════════ -->
+  <div id="scroll-lottie-container" class="lottie-hidden">
+    <dotlottie-wc
+      src="https://lottie.host/20c11b9d-a00c-42bb-b8b6-e254bc99428e/KUZPZoku4y.lottie"
+      style="width: 250px; height: 250px;"
+      autoplay
+      loop>
+    </dotlottie-wc>
+  </div>
+
 
   <!-- ══════════════════════════════════════════
        SCRIPTS
   ══════════════════════════════════════════ -->
   <script>
-    /* Mobile menu toggle */
+    /* ── Mobile menu toggle ───────────────── */
     function toggleMenu() {
-      const menu = document.querySelector('.menu-links');
-      menu.classList.toggle('open');
+      document.querySelector('.menu-links').classList.toggle('open');
     }
 
-    /* About show more */
+    /* ── About show more ──────────────────── */
     function toggleAbout() {
       const extra  = document.getElementById('about-extra');
       const toggle = document.getElementById('about-toggle');
@@ -506,9 +524,8 @@
         : 'Show less <i class="fas fa-chevron-up"   style="font-size:0.79rem;"></i>';
     }
 
-    /* Active nav link on scroll */
-    const sections = document.querySelectorAll('section, [id]');
-    const navLinks  = document.querySelectorAll('#desktop-nav .nav-links a');
+    /* ── Active nav link on scroll ────────── */
+    const navLinks = document.querySelectorAll('#desktop-nav .nav-links a');
 
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -523,9 +540,9 @@
 
     document.querySelectorAll('[id]').forEach(el => observer.observe(el));
 
-    /* Smooth-scroll for anchor links */
+    /* ── Smooth-scroll for anchor links ───── */
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
+      anchor.addEventListener('click', function (e) {
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
           e.preventDefault();
@@ -534,38 +551,61 @@
       });
     });
 
-    /* ══════════════════════════════════════════
-     SCROLL DIRECTION TRACKER FOR LOTTIE
-   ══════════════════════════════════════════ */
-let lastScrollTop = 0;
-const lottieContainer = document.getElementById('scroll-lottie-container');
+    /* ── Scroll direction tracker for Lottie ─
+       FIX: lottieContainer is now queried after
+       the element exists in the DOM              */
+    const lottieContainer = document.getElementById('scroll-lottie-container');
+    let lastScrollTop = 0;
 
-window.addEventListener('scroll', function() {
-  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  
-  // Guard clause: ignore micro-scroll adjustments or bounce-back mechanics at limits
-  if (scrollTop < 10) {
-    lottieContainer.classList.remove('lottie-visible');
-    lottieContainer.classList.add('lottie-hidden');
-    return;
-  }
+    window.addEventListener('scroll', function () {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-  if (scrollTop > lastScrollTop) {
-    // User is scrolling Down -> Show Lottie
-    lottieContainer.classList.remove('lottie-hidden');
-    lottieContainer.classList.add('lottie-visible');
+      /* Hide at the very top of the page */
+      if (scrollTop < 10) {
+        lottieContainer.classList.remove('lottie-visible');
+        lottieContainer.classList.add('lottie-hidden');
+        lastScrollTop = 0;
+        return;
+      }
+
+      if (scrollTop > lastScrollTop) {
+        /* Scrolling DOWN → show */
+        lottieContainer.classList.remove('lottie-hidden');
+        lottieContainer.classList.add('lottie-visible');
+      } else {
+        /* Scrolling UP → hide */
+        lottieContainer.classList.remove('lottie-visible');
+        lottieContainer.classList.add('lottie-hidden');
+      }
+
+      lastScrollTop = scrollTop;
+    }, { passive: true });
+
+
+    /* ── Music player toggle ──────────────── */
+const audio     = document.getElementById('bg-audio');
+const musicIcon = document.getElementById('music-icon');
+
+function toggleMusic() {
+  if (audio.paused) {
+    audio.play();
+    musicIcon.className = 'fas fa-pause';
   } else {
-    // User is scrolling Up -> Hide Lottie
-    lottieContainer.classList.remove('lottie-visible');
-    lottieContainer.classList.add('lottie-hidden');
+    audio.pause();
+    musicIcon.className = 'fas fa-play';
   }
-  
-  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Update position safely
-}, { passive: true });
+}
   </script>
-<div id="scroll-lottie-container" class="lottie-hidden">
-  <dotlottie-wc src="https://lottie.host/20c11b9d-a00c-42bb-b8b6-e254bc99428e/KUZPZoku4y.lottie" style="width: 250px; height: 250px;" autoplay loop></dotlottie-wc>
+  
+  <!-- ── MUSIC PLAYER ──────────────────────── -->
+<div id="music-player">
+  <audio id="bg-audio" loop>
+    <source src="./assets/Goodbye.mp3" type="audio/mpeg">
+  </audio>
+  <button id="music-toggle" onclick="toggleMusic()" title="Toggle music">
+    <i class="fas fa-play" id="music-icon"></i>
+  </button>
+  <span id="music-label">just chill</span>
 </div>
-
 </body>
 </html>
