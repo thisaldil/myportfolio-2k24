@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.9.14/dist/dotlottie-wc.js" type="module"></script>
+  <script defer src="main.js"></script>
 </head>
 <body>
 
@@ -507,7 +508,7 @@
   <!-- ══════════════════════════════════════════
        SCRIPTS
   ══════════════════════════════════════════ -->
-  <script>
+<script>
     /* ── Mobile menu toggle ───────────────── */
     function toggleMenu() {
       document.querySelector('.menu-links').classList.toggle('open');
@@ -551,16 +552,13 @@
       });
     });
 
-    /* ── Scroll direction tracker for Lottie ─
-       FIX: lottieContainer is now queried after
-       the element exists in the DOM              */
+    /* ── Scroll direction tracker for Lottie ── */
     const lottieContainer = document.getElementById('scroll-lottie-container');
     let lastScrollTop = 0;
 
     window.addEventListener('scroll', function () {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-      /* Hide at the very top of the page */
       if (scrollTop < 10) {
         lottieContainer.classList.remove('lottie-visible');
         lottieContainer.classList.add('lottie-hidden');
@@ -569,11 +567,9 @@
       }
 
       if (scrollTop > lastScrollTop) {
-        /* Scrolling DOWN → show */
         lottieContainer.classList.remove('lottie-hidden');
         lottieContainer.classList.add('lottie-visible');
       } else {
-        /* Scrolling UP → hide */
         lottieContainer.classList.remove('lottie-visible');
         lottieContainer.classList.add('lottie-hidden');
       }
@@ -581,21 +577,23 @@
       lastScrollTop = scrollTop;
     }, { passive: true });
 
+    /* ── Music player toggle ──────────────── */  ✅ KEEP ONLY THIS ONE
+    function toggleMusic() {
+      const audio     = document.getElementById('bg-audio');
+      const musicIcon = document.getElementById('music-icon');
 
-    /* ── Music player toggle ──────────────── */
-const audio     = document.getElementById('bg-audio');
-const musicIcon = document.getElementById('music-icon');
+      if (!audio) return;
 
-function toggleMusic() {
-  if (audio.paused) {
-    audio.play();
-    musicIcon.className = 'fas fa-pause';
-  } else {
-    audio.pause();
-    musicIcon.className = 'fas fa-play';
-  }
-}
-  </script>
+      if (audio.paused) {
+        audio.play();
+        musicIcon.className = 'fas fa-pause';
+      } else {
+        audio.pause();
+        musicIcon.className = 'fas fa-play';
+      }
+    }
+
+</script>
   
   <!-- ── MUSIC PLAYER ──────────────────────── -->
 <div id="music-player">
