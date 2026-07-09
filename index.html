@@ -156,32 +156,25 @@
 
 
       <!-- ── 2. ABOUT CARD ───────────────────── -->
-      <div class="card" id="about">
-        <div class="card-body">
-          <h2 class="section-title">About</h2>
-          <div class="about-text" id="about-text">
-            <p>
-              Final-year <strong>BSc (Hons) Information Technology</strong> undergraduate at SLIIT with a builder's mindset and
-              an entrepreneurial edge. I architect end-to-end systems — from pixel-perfect frontends to
-              robust backend infrastructures — and ship products that solve real problems in real markets.
-            </p>
-            <br>
-            <p id="about-extra" style="display:none;">
-              Currently leading <strong>EduSense</strong>, a neuro-adaptive learning platform for Sri Lankan Grade 6 science,
-              as both team lead and ML engineer. I work across the full stack: React, Node.js, Fastify,
-              PostgreSQL/PostGIS, Python ML pipelines, and React Native mobile apps. I also manage interns
-              at ABMSZ, running onboarding, code reviews, and sprint cycles.
-              <br><br>
-              Outside of work I am building <strong>Gevora</strong> — a Sri Lankan property portal — and exploring
-              lo-fi / village-life content creation under <em>@dr.lateorious</em>. Every project is a chance
-              to push the craft further.
-            </p>
-          </div>
-          <button class="show-more-btn" id="about-toggle" onclick="toggleAbout()">
-            Show more <i class="fas fa-chevron-down" style="font-size:0.79rem;"></i>
-          </button>
-        </div>
-      </div>
+      <div class="about-text" id="about-text">
+  <p>
+    Final-year <strong>BSc (Hons) Information Technology</strong> undergraduate at SLIIT with a builder's mindset and
+    a strong eye for product design. I architect end-to-end systems — from carefully crafted, accessible frontends to
+    production-grade backend infrastructure — and ship products that solve real problems for real users.
+  </p>
+  <br>
+  <p id="about-extra" style="display:none;">
+    Currently building <strong>Gevora</strong>, a Sri Lankan property portal powered by Next.js, PostgreSQL/PostGIS,
+    Elasticsearch, Redis, and BullMQ — and leading <strong>EduSense</strong> as team lead and ML engineer, a
+    neuro-adaptive learning platform for Sri Lankan Grade 6 science using Random Forest classifiers and LLM/RAG
+    text adaptation.
+    <br><br>
+    I care as much about how a product feels as how it's engineered — this portfolio, and the interfaces in
+    <strong>SpectrumSync</strong> and my ASD therapeutic tracing app, are hand-designed in Figma before a line of
+    code is written. At ABMSZ, I also supervise development interns — onboarding, code review, and sprint delivery
+    via Jira/Trello.
+  </p>
+</div>
 
 
       <!-- ── 3. FEATURED PROJECTS ──────────────── -->
@@ -213,81 +206,72 @@
 
           <div class="divider"></div>
 
-          <div class="project-card" onclick="window.open('https://github.com/eranmadhuka/PrintingPressManagement')">
-            <div class="project-thumb">
-              <div class="project-thumb-placeholder">🖨️</div>
-            </div>
-            <div class="project-info">
-              <div class="project-name">Elite Printing Press Management System</div>
-              <div class="project-stack">Java · Spring Boot · MySQL · HTML/CSS/JS</div>
-              <div class="project-desc">Enterprise-grade printing press management with workflow automation, real-time inventory tracking, and analytics dashboard for operations management.</div>
-              <div class="project-links">
-                <a href="https://github.com/eranmadhuka/PrintingPressManagement" target="_blank" class="project-link-btn" onclick="event.stopPropagation()">
-                  <i class="fab fa-github"></i> Source
-                </a>
-                <a href="https://github.com/eranmadhuka/PrintingPressManagement" target="_blank" class="project-link-btn" onclick="event.stopPropagation()">
-                  <i class="fas fa-external-link-alt"></i> Demo
-                </a>
-              </div>
-            </div>
-          </div>
+          <div class="project-card" onclick="window.open('https://github.com/thisaldil/Gevora-')">
+  <div class="project-thumb"><div class="project-thumb-placeholder">🏘️</div></div>
+  <div class="project-info">
+    <div class="project-name">Gevora — Sri Lankan Property Portal</div>
+    <div class="project-stack">Next.js · TypeScript · PostgreSQL/PostGIS · Elasticsearch · Redis · BullMQ · Turborepo</div>
+    <div class="project-desc">Geospatial property search platform built as a Turborepo monorepo, with map-based
+    search (PostGIS), full-text/faceted search (Elasticsearch), Redis caching, and BullMQ background job
+    processing for listing sync.</div>
+    <div class="project-links">
+      <a href="https://github.com/thisaldil/Gevora-" target="_blank" class="project-link-btn" onclick="event.stopPropagation()">
+        <i class="fab fa-github"></i> Source
+      </a>
+    </div>
+  </div>
+</div>
 
-          <div class="project-card" onclick="window.open('https://github.com/thisaldil/FOODListify')">
-            <div class="project-thumb">
-              <div class="project-thumb-placeholder">🛒</div>
-            </div>
-            <div class="project-info">
-              <div class="project-name">ShoppingMate Pro</div>
-              <div class="project-stack">React Native · Expo · Node.js · MongoDB · Express</div>
-              <div class="project-desc">AI-powered mobile shopping companion with smart list management, adaptive difficulty, and seamless e-commerce integration. Full REST API with Postman-tested endpoints.</div>
-              <div class="project-links">
-                <a href="https://github.com/thisaldil/FOODListify" target="_blank" class="project-link-btn" onclick="event.stopPropagation()">
-                  <i class="fab fa-github"></i> Source
-                </a>
-                <a href="https://github.com/thisaldil/FOODListify" target="_blank" class="project-link-btn" onclick="event.stopPropagation()">
-                  <i class="fas fa-mobile-alt"></i> App Demo
-                </a>
-              </div>
-            </div>
-          </div>
+<div class="project-card" onclick="window.open('https://github.com/thisaldil/Inventorymate')">
+  <div class="project-thumb"><div class="project-thumb-placeholder">📦</div></div>
+  <div class="project-info">
+    <div class="project-name">InventoryMate — Fleet &amp; Inventory Management</div>
+    <div class="project-stack">React · TypeScript · Node.js · MongoDB · Vercel</div>
+    <div class="project-desc">Production inventory system built for a real client, handling stock levels,
+    supplier records, and bulk Excel import/export. Deployed live on Vercel with resolved production issues
+    around serverless filesystem limits, DB connection pooling, and CORS.</div>
+    <div class="project-links">
+      <a href="https://github.com/thisaldil/Inventorymate" target="_blank" class="project-link-btn" onclick="event.stopPropagation()">
+        <i class="fab fa-github"></i> Source
+      </a>
+      <a href="https://inventorymate.vercel.app" target="_blank" class="project-link-btn" onclick="event.stopPropagation()">
+        <i class="fas fa-external-link-alt"></i> Live Demo
+      </a>
+    </div>
+  </div>
+</div>
 
-          <div class="project-card" onclick="window.open('https://github.com/thisaldil/birdsofPreyGame')">
-            <div class="project-thumb">
-              <div class="project-thumb-placeholder">🎮</div>
-            </div>
-            <div class="project-info">
-              <div class="project-name">Birds of Prey Elite — Mobile Game</div>
-              <div class="project-stack">Android · Kotlin · Physics Engine · Multiplayer</div>
-              <div class="project-desc">Next-generation mobile gaming experience with advanced physics, immersive graphics, competitive multiplayer, and a custom game loop engine.</div>
-              <div class="project-links">
-                <a href="https://github.com/thisaldil/birdsofPreyGame" target="_blank" class="project-link-btn" onclick="event.stopPropagation()">
-                  <i class="fab fa-github"></i> Source
-                </a>
-                <a href="https://github.com/thisaldil/birdsofPreyGame" target="_blank" class="project-link-btn" onclick="event.stopPropagation()">
-                  <i class="fas fa-gamepad"></i> Play
-                </a>
-              </div>
-            </div>
-          </div>
+<div class="project-card" onclick="window.open('https://github.com/thisaldil/asd-tracing-system')">
+  <div class="project-thumb"><div class="project-thumb-placeholder">🧩</div></div>
+  <div class="project-info">
+    <div class="project-name">ASD Therapeutic Tracing App</div>
+    <div class="project-stack">React Native (Expo) · Node.js · Express · Accessibility-first UX</div>
+    <div class="project-desc">Adaptive shape-tracing app for children with Autism Spectrum Disorder, with
+    waypoint hit detection and real-time haptic feedback. Designed around sensory-friendly UX patterns —
+    calm color palettes, forgiving touch targets, and gentle feedback loops.</div>
+    <div class="project-links">
+      <a href="https://github.com/thisaldil/asd-tracing-system" target="_blank" class="project-link-btn" onclick="event.stopPropagation()">
+        <i class="fab fa-github"></i> Source
+      </a>
+    </div>
+  </div>
+</div>
 
-          <div class="project-card">
-            <div class="project-thumb">
-              <div class="project-thumb-placeholder">🧠</div>
-            </div>
-            <div class="project-info">
-              <div class="project-name">EduSense — Neuro-Adaptive Learning Platform</div>
-              <div class="project-stack">Python · Random Forest · LLM/RAG · React · Node.js · XTTS v2</div>
-              <div class="project-desc">BSc final-year research: cognitive-linguistic text adaptation engine for Grade 6 Sri Lankan science using ML classifiers, RAG-based rewriting, and rule-based NLP validation. Team lead, 4 members.</div>
-              <div class="project-links">
-                <a href="#" class="project-link-btn">
-                  <i class="fas fa-flask"></i> Research
-                </a>
-                <a href="#" class="project-link-btn">
-                  <i class="fas fa-file-alt"></i> Paper
-                </a>
-              </div>
-            </div>
-          </div>
+<div class="project-card">
+  <div class="project-thumb"><div class="project-thumb-placeholder">🧠</div></div>
+  <div class="project-info">
+    <div class="project-name">EduSense — Neuro-Adaptive Learning Platform</div>
+    <div class="project-stack">Python · Random Forest · LLM/RAG · React · Node.js</div>
+    <div class="project-desc">BSc final-year research: cognitive-linguistic text adaptation engine for
+    Grade 6 Sri Lankan science, using ML classifiers, RAG-based rewriting, and rule-based NLP validation.
+    Team lead, 4-person team.</div>
+    <div class="project-links">
+      <a href="https://github.com/thisaldil/EduSense" target="_blank" class="project-link-btn" onclick="event.stopPropagation()">
+        <i class="fab fa-github"></i> Source
+      </a>
+    </div>
+  </div>
+</div>
 
           <div class="show-more-row">
             <a href="https://github.com/thisaldil" target="_blank">
@@ -355,47 +339,51 @@
           <h2 class="section-title">Skills</h2>
 
           <p class="section-eyebrow" style="margin-bottom:var(--sp-md);">Core Languages</p>
-          <div class="skills-grid" style="margin-bottom:var(--sp-xl);">
-            <span class="skill-pill"><i class="fab fa-js-square"></i> JavaScript <span class="skill-endorsement">★ Master</span></span>
-            <span class="skill-pill"><i class="fab fa-java"></i> Java <span class="skill-endorsement">★ Expert</span></span>
-            <span class="skill-pill"><i class="fab fa-python"></i> Python <span class="skill-endorsement">Advanced</span></span>
-            <span class="skill-pill"><i class="fas fa-code"></i> C / C++ <span class="skill-endorsement">Expert</span></span>
-            <span class="skill-pill"><i class="fab fa-php"></i> PHP <span class="skill-endorsement">Expert</span></span>
-          </div>
+<div class="skills-grid" style="margin-bottom:var(--sp-xl);">
+  <span class="skill-pill"><i class="fab fa-js-square"></i> JavaScript</span>
+  <span class="skill-pill"><i class="fab fa-js-square"></i> TypeScript</span>
+  <span class="skill-pill"><i class="fab fa-python"></i> Python</span>
+  <span class="skill-pill"><i class="fab fa-java"></i> Java</span>
+  <span class="skill-pill"><i class="fas fa-code"></i> Kotlin</span>
+</div>
 
-          <p class="section-eyebrow" style="margin-bottom:var(--sp-md);">Frontend</p>
-          <div class="skills-grid" style="margin-bottom:var(--sp-xl);">
-            <span class="skill-pill"><i class="fab fa-react"></i> React</span>
-            <span class="skill-pill"><i class="fab fa-react"></i> React Native</span>
-            <span class="skill-pill"><i class="fab fa-vuejs"></i> Vue.js</span>
-            <span class="skill-pill"><i class="fab fa-html5"></i> HTML5</span>
-            <span class="skill-pill"><i class="fab fa-css3-alt"></i> CSS3</span>
-            <span class="skill-pill"><i class="fas fa-paint-brush"></i> Tailwind CSS</span>
-            <span class="skill-pill"><i class="fas fa-layer-group"></i> Next.js</span>
-          </div>
+<p class="section-eyebrow" style="margin-bottom:var(--sp-md);">Frontend</p>
+<div class="skills-grid" style="margin-bottom:var(--sp-xl);">
+  <span class="skill-pill"><i class="fab fa-react"></i> React</span>
+  <span class="skill-pill"><i class="fab fa-react"></i> React Native (Expo)</span>
+  <span class="skill-pill"><i class="fas fa-layer-group"></i> Next.js</span>
+  <span class="skill-pill"><i class="fas fa-paint-brush"></i> Tailwind CSS</span>
+</div>
 
-          <p class="section-eyebrow" style="margin-bottom:var(--sp-md);">Backend &amp; Data</p>
-          <div class="skills-grid" style="margin-bottom:var(--sp-xl);">
-            <span class="skill-pill"><i class="fab fa-node-js"></i> Node.js</span>
-            <span class="skill-pill"><i class="fas fa-server"></i> Express.js</span>
-            <span class="skill-pill"><i class="fas fa-bolt"></i> Fastify</span>
-            <span class="skill-pill"><i class="fas fa-leaf"></i> Spring Boot</span>
-            <span class="skill-pill"><i class="fas fa-database"></i> MySQL</span>
-            <span class="skill-pill"><i class="fas fa-leaf"></i> MongoDB</span>
-            <span class="skill-pill"><i class="fas fa-database"></i> PostgreSQL / PostGIS</span>
-            <span class="skill-pill"><i class="fas fa-search"></i> Elasticsearch</span>
-          </div>
+<p class="section-eyebrow" style="margin-bottom:var(--sp-md);">UI/UX Design</p>
+<div class="skills-grid" style="margin-bottom:var(--sp-xl);">
+  <span class="skill-pill"><i class="fas fa-palette"></i> Figma — Wireframing &amp; Prototyping</span>
+  <span class="skill-pill"><i class="fas fa-swatchbook"></i> Design Systems</span>
+  <span class="skill-pill"><i class="fas fa-mobile-alt"></i> Responsive &amp; Mobile-First Design</span>
+  <span class="skill-pill"><i class="fas fa-universal-access"></i> Accessibility-First UX</span>
+  <span class="skill-pill"><i class="fas fa-magic"></i> Micro-interactions &amp; Motion (Lottie)</span>
+</div>
 
-          <p class="section-eyebrow" style="margin-bottom:var(--sp-md);">DevOps &amp; Tools</p>
-          <div class="skills-grid">
-            <span class="skill-pill"><i class="fab fa-git-alt"></i> Git</span>
-            <span class="skill-pill"><i class="fab fa-docker"></i> Docker</span>
-            <span class="skill-pill"><i class="fas fa-fire"></i> Firebase</span>
-            <span class="skill-pill"><i class="fab fa-google"></i> Google Cloud</span>
-            <span class="skill-pill"><i class="fas fa-bolt"></i> Vercel</span>
-            <span class="skill-pill"><i class="fas fa-palette"></i> Figma</span>
-            <span class="skill-pill"><i class="fas fa-robot"></i> ML / RAG / LLM</span>
-          </div>
+<p class="section-eyebrow" style="margin-bottom:var(--sp-md);">Backend &amp; Data</p>
+<div class="skills-grid" style="margin-bottom:var(--sp-xl);">
+  <span class="skill-pill"><i class="fab fa-node-js"></i> Node.js / Express</span>
+  <span class="skill-pill"><i class="fas fa-bolt"></i> Fastify</span>
+  <span class="skill-pill"><i class="fas fa-leaf"></i> Spring Boot</span>
+  <span class="skill-pill"><i class="fas fa-leaf"></i> MongoDB</span>
+  <span class="skill-pill"><i class="fas fa-database"></i> PostgreSQL / PostGIS</span>
+  <span class="skill-pill"><i class="fas fa-search"></i> Elasticsearch</span>
+  <span class="skill-pill"><i class="fas fa-bolt"></i> Redis</span>
+</div>
+
+<p class="section-eyebrow" style="margin-bottom:var(--sp-md);">DevOps &amp; Tools</p>
+<div class="skills-grid">
+  <span class="skill-pill"><i class="fab fa-git-alt"></i> Git</span>
+  <span class="skill-pill"><i class="fab fa-docker"></i> Docker</span>
+  <span class="skill-pill"><i class="fab fa-google"></i> AWS (Lambda, S3, DynamoDB)</span>
+  <span class="skill-pill"><i class="fas fa-bolt"></i> Vercel</span>
+  <span class="skill-pill"><i class="fas fa-cogs"></i> GitHub Actions / Terraform</span>
+  <span class="skill-pill"><i class="fas fa-robot"></i> ML / RAG / LLM</span>
+</div>
         </div>
       </div>
 
